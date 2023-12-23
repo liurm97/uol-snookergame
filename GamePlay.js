@@ -294,19 +294,10 @@ class GamePlay {
   gamePlay(mode) {
     if (mode == -1 || mode == 4) {
       if (cueball1.cueballIsOutOfBounds()) {
-        cueball1.setOutOfBoundsMessage();
+        if (cueball1.body.position.x == 0 || cueball1.body.position.x == -10) {
+          cueball1.setOutOfBoundsMessage();
+        }
       }
-      push();
-      fill(255);
-      textSize(16);
-      strokeWeight(1);
-      textAlign(CENTER);
-      text(
-        "Hover your mouse and place cueball within the 'D' zone. ",
-        xTableShiftOffset + snookerTable.l / 2,
-        yTableShiftOffset + snookerTable.w / 2
-      );
-      pop();
       this.startFrame = frameCount;
     }
 
@@ -334,7 +325,7 @@ class GamePlay {
         strokeWeight(1);
         textAlign(CENTER);
         text(
-          "3. Start!",
+          "Start!",
           2 * xTableShiftOffset + snookerTable.l / 2,
           yTableShiftOffset + snookerTable.w / 2
         );

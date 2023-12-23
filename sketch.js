@@ -240,6 +240,7 @@ function draw() {
     if (cueball1.pocketed(p.x, p.y)) {
       console.log("Removing Cueball...");
       cueball1.reset();
+      mode = 4;
       break;
     }
   }
@@ -334,6 +335,7 @@ function draw() {
       console.log(`force: ${force}`);
     }
   }
+  console.log(`mode: ${mode}`);
   gameplay.gamePlay(mode);
 }
 
@@ -345,12 +347,20 @@ function mousePressed() {
   );
 
   //Restrict cueball to be set within the "D" zone
-  if (mode == -1 || mode == 4) {
+  if (mode == -1) {
     if (!cueball1.cueballIsOutOfBounds()) {
       console.log("setting ball");
       mode += 1;
       cueball1.update();
       fill(255);
+    }
+  }
+
+  if (mode == 4) {
+    if (!cueball1.cueballIsOutOfBounds()) {
+      console.log("setting ball");
+      cueball1.update();
+      // mode = 5;
     }
   }
 }

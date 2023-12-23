@@ -216,5 +216,17 @@ class CueBall extends Ball {
     textAlign(CENTER);
     text("*WARNING* Cueball must be placed within the 'D' zone.", 388, 450);
     pop();
+
+    push();
+    fill(255);
+    textSize(16);
+    strokeWeight(1);
+    textAlign(CENTER);
+    text(
+      "Hover your mouse and place cueball within the 'D' zone. ",
+      xTableShiftOffset + snookerTable.l / 2,
+      yTableShiftOffset + snookerTable.w / 2
+    );
+    pop();
   }
 }
