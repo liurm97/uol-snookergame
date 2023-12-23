@@ -425,7 +425,7 @@ class GamePlay {
 
   // 5) Reset game mode
   reset() {
-    this.bonusRoundTimer = 2000;
+    this.bonusRoundTimer = 5000;
     mode = -1;
     redBalls = [];
     coloredBalls = [];
