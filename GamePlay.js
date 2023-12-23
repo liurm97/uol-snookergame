@@ -338,12 +338,12 @@ class GamePlay {
       fill(255);
       this.displayInstruction();
       push();
-      fill(255);
-      textSize(15);
+      fill(255, 0, 0);
+      textSize(18);
       text(
         `Time Left: ${floor(map(this.bonusRoundTimer, 0, 5000, 0, 60))}`,
         snookerTable.l / 2,
-        snookerTable.w * 1.25
+        snookerTable.w + 3 * yTableShiftOffset
       );
       pop();
       console.log(`Time remaining: ${this.bonusRoundTimer}`);
