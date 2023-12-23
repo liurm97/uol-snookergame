@@ -219,13 +219,25 @@ class CueBall extends Ball {
 
     push();
     fill(255);
-    textSize(16);
+    textSize(15);
     strokeWeight(1);
     textAlign(CENTER);
     text(
-      "Hover your mouse and place cueball within the 'D' zone. ",
-      xTableShiftOffset + snookerTable.l / 2,
+      "1) Mode 1,2,3: Hover your mouse and place cueball within the 'D' zone. ",
+      2 * xTableShiftOffset + snookerTable.l / 2,
       yTableShiftOffset + snookerTable.w / 2
+    );
+    pop();
+
+    push();
+    fill(255);
+    textSize(15);
+    strokeWeight(1);
+    textAlign(CENTER);
+    text(
+      "2) Extension Mode: Hit '4' key or click on the button below.",
+      2 * xTableShiftOffset + snookerTable.l / 2,
+      3 * yTableShiftOffset + snookerTable.w / 2
     );
     pop();
   }

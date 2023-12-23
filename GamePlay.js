@@ -309,7 +309,7 @@ class GamePlay {
       strokeWeight(1);
       textAlign(CENTER);
       text(
-        "Set balls by either hitting keys {1, 2, 3} or clicking the buttons below ",
+        "Set balls by either hitting keys '1', '2', '3' or clicking the buttons below ",
         2 * xTableShiftOffset + snookerTable.l / 2,
         yTableShiftOffset + snookerTable.w / 2
       );
@@ -335,6 +335,8 @@ class GamePlay {
 
     // Bonus Extension Round - With Timer
     if (mode == 5) {
+      fill(255);
+      this.displayInstruction();
       push();
       fill(255);
       textSize(15);
@@ -369,9 +371,9 @@ class GamePlay {
         strokeWeight(1);
         textAlign(CENTER);
         text(
-          "Start!",
+          "Start! Pocket all red balls to Win!",
           3 * xTableShiftOffset + snookerTable.l / 2,
-          yTableShiftOffset + snookerTable.w / 2
+          3 * yTableShiftOffset + snookerTable.w / 2
         );
         pop();
       }
@@ -392,6 +394,11 @@ class GamePlay {
     push();
     textSize(12);
     text("Cuestick", 10, 415);
+    pop();
+
+    push();
+    textSize(12);
+    text("Hit 'R' Key to reset game", (snookerTable.l * 3) / 4, 415);
     pop();
 
     push();

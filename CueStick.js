@@ -21,7 +21,7 @@ class CueStick {
 
     const options = {
       isStatic: false,
-      restitution: 0.2,
+      restitution: 0.5,
       friction: 0.01,
     };
 

@@ -23,7 +23,7 @@ class Ball {
     // Ball physics settings
     const options = {
       isStatic: false,
-      restitution: 0.2,
+      restitution: 0.7,
       friction: 0.01,
     };
 
